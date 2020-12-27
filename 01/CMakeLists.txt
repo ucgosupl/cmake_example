@@ -14,6 +14,9 @@ link_directories(
 
 )
 
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_FLAGS "-Wall -Wextra -Og")
+
 add_executable(${CMAKE_PROJECT_NAME}
     main.c
 )
