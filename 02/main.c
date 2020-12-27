@@ -18,12 +18,24 @@ int main(void)
     printf(STRINGIFY(COMPILER));
     printf("\n");
 
+    // Git data are generated when running cmake
+    // CMake must be run again after every commit to update
     printf("\n");
     printf("Git commit ID: ");
     printf(STRINGIFY(GIT_COMMIT));
     printf("\n");
     printf("Git branch: ");
     printf(STRINGIFY(GIT_BRANCH));
+    printf("\n");
+
+    // Compilation date and time are not generated at CMake generation time
+    // So we must use compiler predefined symbols, not CMake symbols
+    printf("\n");
+    printf("Compilation date: ");
+    printf(__DATE__);
+    printf("\n");
+    printf("Compilation time: ");
+    printf(__TIME__);
     printf("\n");
 
     return 0;
