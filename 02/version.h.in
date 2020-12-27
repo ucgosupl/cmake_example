@@ -8,3 +8,6 @@
 
 #define COMPILER_ID     @CMAKE_C_COMPILER_ID@
 #define COMPILER        @CMAKE_C_COMPILER@
+
+#define GIT_BRANCH      @GIT_BRANCH@
+#define GIT_COMMIT      @GIT_COMMIT@
