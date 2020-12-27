@@ -11,14 +11,13 @@ add_definitions(
 )
 
 link_directories(
-
+    lib
 )
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "-Wall -Wextra -Og")
 
-set(LD_FLAGS "-Wl,-Map=${CMAKE_PROJECT_NAME}.map -Wl,--gc-sections")
-set(CMAKE_EXE_LINKER_FLAGS "${LD_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,-Map=${CMAKE_PROJECT_NAME}.map -Wl,--gc-sections")
 
 add_executable(${CMAKE_PROJECT_NAME}
     main.c
