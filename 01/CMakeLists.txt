@@ -7,7 +7,7 @@ include_directories(
 )
 
 add_definitions(
-
+    -DEXAMPLE_DEFINE
 )
 
 add_executable(${CMAKE_PROJECT_NAME}
